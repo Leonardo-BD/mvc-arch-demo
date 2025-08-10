@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: mvc
+  datasource:
+    url: jdbc:noop
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none  # 'none', 'update', 'create', 'create-drop'
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+server:
+  port: 8080
+  servlet:
+    context-path: /api/v1
+
+flyway:
+  enabled: false
